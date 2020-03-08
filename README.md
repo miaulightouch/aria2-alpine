@@ -19,8 +19,8 @@ services:
       - /srv/aria2:/srv/aria2
     ports:
       - 127.0.0.1:6800:6800
-      - 6801-6899:6801-6999
-      - 6801-6899:6801-6999/udp
+      - 6801-6999:6801-6999
+      - 6801-6999:6801-6999/udp
 ```
 
 example aria2.conf:
@@ -32,8 +32,8 @@ input-file=/etc/aria2/aria2.session
 save-session=/etc/aria2/aria2.session
 save-session-interval=1
 auto-save-interval=1
-listen-port=6801-6899
+listen-port=6801-6999
 dht-file-path=/etc/aria2/dht.dat
 dht-file-path6=/etc/aria2/dht6.dat
-dht-listen-port=6801-6899
+dht-listen-port=6801-6999
 ```
